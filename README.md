@@ -1,2 +1,4 @@
 # international-weather-app
-Docker compose &amp; https://github.com/RomanDeveloperGit/international-weather-frontend &amp; https://github.com/RomanDeveloperGit/international-weather-backend
+Docker compose
+International weather frontend: https://github.com/RomanDeveloperGit/international-weather-frontend
+International weather backend: https://github.com/RomanDeveloperGit/international-weather-backend
