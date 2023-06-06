@@ -3,17 +3,17 @@ services:
   frontend:
     build: ./international-weather-frontend
     ports:
-      - 80:80
+      - ${FRONTEND_PORT_OUTSIDE}:${FRONTEND_PORT_INSIDE}
     environment:
-      - PORT=80
+      - PORT=${FRONTEND_PORT_INSIDE}
       - API_PROTOCOL="http:"
       - API_HOST="localhost"
-      - API_PORT=8000
+      - API_PORT=${BACKEND_PORT_OUTSIDE}
       - API_MAX_REQUEST_TIMEOUT=30000
   backend:
     build: ./international-weather-backend
     ports:
-      - 8000:8000
+      - ${BACKEND_PORT_OUTSIDE}:${BACKEND_PORT_INSIDE}
     environment:
-      - PORT=8000
+      - PORT=${BACKEND_PORT_INSIDE}
       - WEATHER_API_KEY="api_key"
